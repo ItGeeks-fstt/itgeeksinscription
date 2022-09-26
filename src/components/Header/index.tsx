@@ -7,8 +7,8 @@ export const Header = () => {
         <C.Container>
        
             <div>
-            <h1>Inscription des candidas</h1>
-            <p>Inscrivez-vous pour joindre notre Club</p>
+            <h1>Candidate registration</h1>
+            <p>Sign up to join our Club</p>
             </div>
             <div className='img'>
 <img  src={Imgsrc} alt="It geeks clup logo"></img>
