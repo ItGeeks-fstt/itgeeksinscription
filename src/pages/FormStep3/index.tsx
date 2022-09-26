@@ -17,11 +17,11 @@ export const FormStep3 = () => {
             history.push('/step4')
         } else{
 
-        alert(`   remplir correctement les données
+        alert(`   correctly fill in the data
         
-        ${state.email.includes('@') ?'':'email doit etre valide (avoir @)'}
-        ${state.github !== ''  ?'':'github sinon taper null'}
-        ${state.number?'':'Numéro'}
+        ${state.email.includes('@') ?'':'email must be valid (have @)'}
+        ${state.github !== ''  ?'':'github otherwise type null'}
+        ${state.number?'':'Number'}
         `
         );
         e.preventDefault();
@@ -72,10 +72,10 @@ export const FormStep3 = () => {
         <Theme>
             <C.Container>
                 <p className='passo'> Step 3/5</p>
-                <h2>Cool  {state.name}, où te trouve-t-on ?</h2>
-                <p>Remplissez vos coordonnées afin que nous puissions vous contacter.</p>
+                <h2>Cool  {state.name}, where do we find you ?</h2>
+                <p>Fill in your details so that we can contact you.</p>
 
-                <label>Quel est votre e-mail ?</label>
+                <label>What is your email ?</label>
                 <input 
                 type="email" 
                 onChange={handleEmailChange}
@@ -83,14 +83,14 @@ export const FormStep3 = () => {
         
                 />
         
-                <label>Quel est votre numéro WhatsApp?</label>
+                <label>What is your whatsapp number?</label>
                 <input 
                 type="number" 
                 onChange={handleNumberChange}
                 value={state.number}
             
                 />
-                <label>Quel est votre GitHub ?</label>
+                <label>What is your GitHub ?</label>
                 <input 
                 type="text" 
                 onChange={handleUrlChange}
@@ -100,8 +100,8 @@ export const FormStep3 = () => {
            
                 
                 <div  className='navigation'>
-                    <Link to='/step2'>Revenir</Link>
-                    <button  onClick={handleNextStep} type="submit" className="cssbuttons-io-button"> suivante
+                    <Link to='/step2'>Back</Link>
+                    <button  onClick={handleNextStep} type="submit" className="cssbuttons-io-button"> Next
                   <div className="icon">
                   <ButtonIcon/>
                   </div>

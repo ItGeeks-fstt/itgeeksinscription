@@ -90,9 +90,9 @@ export const FormStep5 = () => {
     return(
         <Theme>
             <C.Container>
-            { !hasEror && !iswaiting && <><h2>Toutes nos félicitations</h2><p>Inscription envoyée avec succès !</p></>}
-            { hasEror && <><h2>OOOOPS </h2><p> Une erreur est survenue !</p></>} 
-            { iswaiting && <><h2>pourriez-vous s'il vous plaît </h2><p>votre demande est en cours d'exécution</p></>}
+            { !hasEror && !iswaiting && <><h2>Congratulations</h2><p>Registration sent successfully !</p></>}
+            { hasEror && <><h2>OOOOPS </h2><p> An error has occurred !</p></>} 
+            { iswaiting && <><h2>could you please </h2><p>your request is being processed</p></>}
 
                 <C.IconArea>
                   { !hasEror && !iswaiting && <CheckIcon fill="rgb(91, 24, 153)" width={120} height={120}/>}
@@ -100,7 +100,7 @@ export const FormStep5 = () => {
                   { iswaiting && <Waiting fill="rgb(91, 24, 153)" width={120} height={120}/>}
                 </C.IconArea>
 
-                <p className='check-email'> <b>{state.name}</b> nous avons bien reçu votre email et vos informations, restez en contact!!!</p>
+                <p className='check-email'> <b>{state.name}</b> we have received your email and your information, stay in touch!!!</p>
                 
 
             </C.Container>

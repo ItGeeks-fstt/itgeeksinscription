@@ -43,7 +43,7 @@ export const FormStep4 = () => {
     return(
         <Theme>
             <C.Container>
-            <p className='passo'>STEP 4/5</p>
+            <p className='passo'>Step 4/5</p>
             <h2>{state.name} Choose your Team</h2>
             <p>You can read the description to get more info</p>
 
@@ -81,8 +81,8 @@ export const FormStep4 = () => {
                 />
 
             <div className='navigation'>
-                <Link to='/step3'>Revenir</Link>
-                <button  onClick={handleNextStep} className="cssbuttons-io-button"> suivante
+                <Link to='/step3'>Back</Link>
+                <button  onClick={handleNextStep} className="cssbuttons-io-button"> Next
                   <div className="icon">
                   <ButtonIcon/>
                   </div>
