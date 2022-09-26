@@ -15,25 +15,22 @@ export const FormStep2 = () => {
     const history = useHistory()
 
     const handleNextStep = () => {
-        history.push('/step3')
-
+      
+       state.level!==undefined && history.push('/step3')
     }
 
     useEffect(()=>{
-        if(state.name === '') {
-            history.push('/')
-        } else{
+      
             dispatch({
                 type: FormActions.setCurrentStep,
                 payload: 2
             })
-        }
+        
         
 
     },[])
 
     const setLevel = (level: number) => {
-        handleNextStep()
         dispatch({
             type: FormActions.setLevel,
             payload: level 
@@ -44,24 +41,26 @@ export const FormStep2 = () => {
     return(
         <Theme>
             <C.Container>
-            <p className='passo'>Étape 2/3</p>
-            <h2>{state.name}, qu'est-ce qui vous décrit le mieux ?</h2>
-            <p>Choisissez la meilleure option qui décrit votre niveau actuel</p>
+            <p className='passo'>Step 2/5</p>
+            <h2>{state.name}, What's describe you the most</h2>
+            <p>Choose an option that describe your current level</p>
 
             <SelectOption
-            title="Je suis un débutant"
-            description="Je suis intresse par toutes ce qui est informatique" 
+            title="I am a beginner"
+            description="I'm interested in all things computer." 
             icon="🥳"
-            selected={state.level === 0}
-            onClick={()=>setLevel(0)}
+            selected={state.level === 1}
+            onClick={()=>setLevel(1)}
+            more=''
             />
 
              <SelectOption
-                    title="Je suis un programmeur"
-                    description="Je programme depuis une Période"
+                    title="I am a programmer"
+                    description="I have been programming for a Period"
                     icon="😎"
-                    selected={state.level === 1}
-                    onClick={()=>setLevel(1)}
+                    selected={state.level === 2}
+                    onClick={()=>setLevel(2)}
+                    more=''
                 />
 
             <div className='navigation'>

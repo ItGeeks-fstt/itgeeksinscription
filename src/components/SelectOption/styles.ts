@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled  from "styled-components";
+
 
 export const Container = styled.div<{selected : boolean;}>`
     display: flex;
@@ -12,7 +13,10 @@ export const Container = styled.div<{selected : boolean;}>`
     &:hover {
         border: 2px solid rgb(91, 24, 153);
     }
-   
+   @media (max-width: 768px) {
+    flex-direction: column;
+   gap: 2rem;
+   }
     background-color: rgb(235, 235, 235);
 `;
 
@@ -37,8 +41,20 @@ export const Title = styled.div`
     font-weight: bold;
     margin-bottom: 7px;
 `;
+const Description = `
+font-size: 14px;
+line-height: 1.5;
 
-export const Description = styled.div`
-    font-size: 14px;
+`
+export const DescriptionDiv = styled.div`
+  ${Description}
    
+`;
+export const DescriptionSpan = styled.span`
+
+${Description} 
+`;
+export const More =styled.span`
+    font-size: 14px;
+    color:rgb(91,24,153);
 `;

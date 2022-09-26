@@ -71,7 +71,7 @@ export const FormStep3 = () => {
     return(
         <Theme>
             <C.Container>
-                <p className='passo'> Étape 3/3</p>
+                <p className='passo'> Step 3/5</p>
                 <h2>Cool  {state.name}, où te trouve-t-on ?</h2>
                 <p>Remplissez vos coordonnées afin que nous puissions vous contacter.</p>
 

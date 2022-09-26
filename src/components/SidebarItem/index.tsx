@@ -4,6 +4,7 @@ import { ReactComponent as ProfileIcon } from '../../svgs/profile.svg';
 import { ReactComponent as BookIcon } from '../../svgs/book.svg';
 import { ReactComponent as MailIcon } from '../../svgs/mail.svg';
 import {ReactComponent as CheckIcon} from '../../svgs/check.svg'
+import {ReactComponent as TeamIcon} from '../../svgs/team.svg'
 
 type Props = {
     title: string;
@@ -31,6 +32,9 @@ export const SidebarItem = ({ title, description, icon, path, active,allowed}: P
                     }
                     {icon === 'mail' &&
                         <MailIcon fill="white" width={24} height={24} />
+                    }
+                    {icon === 'team' &&
+                        <TeamIcon fill="white" width={24} height={24} />
                     }
                     {icon === 'check' &&
                         <CheckIcon fill="white" width={24} height={24} />

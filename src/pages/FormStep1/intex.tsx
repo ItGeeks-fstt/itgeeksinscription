@@ -40,7 +40,7 @@ export const FormStep1 = () => {
     return(
         <Theme>
             <C.Container>
-                <p className='passo'>Étape 1/3 </p>
+                <p className='passo'>Étape 1/5 </p>
                 <h2>Commençons par votre nom</h2>
                 <p>Remplissez le champ avec votre nom</p>
 

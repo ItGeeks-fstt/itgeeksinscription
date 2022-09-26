@@ -21,8 +21,8 @@ export const Theme = ({children}: Props) => {
                 <C.Steps>
                     <C.Sidebar>
                     <SidebarItem
-                            title="personnel"
-                            description="identifier-vous"
+                            title="Personal"
+                            description="identify yourself"
                             icon="profile"
                             path="/"
                             active={state.currentStep === 1}
@@ -30,8 +30,8 @@ export const Theme = ({children}: Props) => {
                         />
 
                         <SidebarItem
-                            title="Professionnelle"
-                            description="votre niveau"
+                            title="Professional"
+                            description="Your level"
                             icon="book"
                             path="/step2"
                             active={state.currentStep === 2}
@@ -40,19 +40,27 @@ export const Theme = ({children}: Props) => {
 
                         <SidebarItem
                             title="Contacts"
-                            description="comment vous trouver"
+                            description="How  we can find you "
                             icon="mail"
                             path="/step3"
                             active={state.currentStep === 3}
                             allowed={state.currentStep >= 3}
                         />
                         <SidebarItem
-                            title="Conclu"
-                            description="Succès"
-                            icon="check"
+                            title="Team"
+                            description="Choose  your team"
+                            icon="team"
                             path="/step4"
                             active={state.currentStep === 4}
                             allowed={state.currentStep >= 4}
+                        />
+                        <SidebarItem
+                            title="Final step"
+                            description="Submit your form"
+                            icon="check"
+                            path="/step5"
+                            active={state.currentStep === 5}
+                            allowed={state.currentStep >= 5}
                         />
                     </C.Sidebar>
                     <C.Page>
