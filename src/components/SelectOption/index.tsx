@@ -30,7 +30,7 @@ export const SelectOption = ({title, description, icon, selected, onClick,more}:
         {more!=='' && <>
                 {!showMore  && <C.More onClick={showMoreHandler} >show more</C.More>}
                 {showMore && <C.DescriptionSpan>{more}</C.DescriptionSpan>}
-                {showMore && <C.More onClick={showMoreHandler} >show less</C.More>}
+                {showMore && <C.More onClick={showMoreHandler} >&nbsp;show less</C.More>}
         </>}
                 
                 

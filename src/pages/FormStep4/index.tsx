@@ -16,7 +16,7 @@ export const FormStep4 = () => {
 
     const handleNextStep = () => {
         
-        history.push('/step5')
+       state.team && history.push('/step5')
 
     }
 
@@ -65,11 +65,11 @@ export const FormStep4 = () => {
                 />
             <SelectOption
             title="Media  team"
-            description="Coding is what we do and love. And we want for all students who are interested in computer science to" 
+            description="Social media provides a platform for direct communication between coders throughout the world. It can be a key driver of content distribution." 
             icon="📀"
             selected={state.team === 3}
             onClick={()=>setLevel(3)}
-            more=" understand the concepts and write better code by learning and teaching each other. By choosing this team, you will be helping other students in developing applications, learning programming languages and solving problems… You should know the basic coding languages such as C++ and JavaScript. More over you should know how to write and debug code, as well as having an experience in front-end or back-end software development"
+            more=" Our strategy is to create a community of people interested in technology. So this team will be responsible for creating and publishing original content, sharing memories of the club, and promoting our projects in the social media. This will be for sure an opportunity to develop your skills through post-processing and video editing..."
             />
              <SelectOption
                     title="Design  team"
