@@ -23,7 +23,7 @@ export const FormStep1 = () => {
         if(state.name !== '') {
             history.push('/step2')
         } else{
-            alert('Remplissez correctement les données \n\nNom')
+            alert('Fill in the data correctly \n\nName')
         }
 
     }
@@ -40,11 +40,11 @@ export const FormStep1 = () => {
     return(
         <Theme>
             <C.Container>
-                <p className='passo'>Étape 1/5 </p>
-                <h2>Commençons par votre nom</h2>
-                <p>Remplissez le champ avec votre nom</p>
+                <p className='passo'>Step 1/5 </p>
+                <h2>Let's start with your name</h2>
+                <p>Fill in the field with your name</p>
 
-                <label>Ton nom complet</label>
+                <label>Your full name</label>
                 <input 
                     type="text" 
                     autoFocus
@@ -53,7 +53,7 @@ export const FormStep1 = () => {
                     />
                     
 
-                <button  onClick={handleNextStep} className="cssbuttons-io-button"> suivante
+                <button  onClick={handleNextStep} className="cssbuttons-io-button"> Next
                   <div className="icon">
                   <ButtonIcon/>
                   </div>

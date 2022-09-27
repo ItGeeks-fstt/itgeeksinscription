@@ -25,7 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postbuild": "rmdir /s /q docs & ren build docs"
+    "postbuild": "(rmdir /s /q docs | rm -r docs) & (ren build docs | mv -T build docs)"
   },
   "eslintConfig": {
     "extends": [

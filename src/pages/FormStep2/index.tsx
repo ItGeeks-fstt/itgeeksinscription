@@ -64,8 +64,8 @@ export const FormStep2 = () => {
                 />
 
             <div className='navigation'>
-                <Link to='/'>Revenir</Link>
-                <button  onClick={handleNextStep} className="cssbuttons-io-button"> suivante
+                <Link to='/'>Back</Link>
+                <button  onClick={handleNextStep} className="cssbuttons-io-button"> Next
                   <div className="icon">
                   <ButtonIcon/>
                   </div>

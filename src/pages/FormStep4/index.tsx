@@ -43,7 +43,7 @@ export const FormStep4 = () => {
     return(
         <Theme>
             <C.Container>
-            <p className='passo'>STEP 4/5</p>
+            <p className='passo'>Step 4/5</p>
             <h2>{state.name} Choose your Team</h2>
             <p>You can read the description to get more info</p>
 
@@ -65,11 +65,11 @@ export const FormStep4 = () => {
                 />
             <SelectOption
             title="Media  team"
-            description="Social media provides a platform for direct communication between coders throughout the world. It can be a key driver of content distribution." 
+            description="Social media provides a platform for direct communication between coders throughout the world. It can" 
             icon="📀"
             selected={state.team === 3}
             onClick={()=>setLevel(3)}
-            more=" Our strategy is to create a community of people interested in technology. So this team will be responsible for creating and publishing original content, sharing memories of the club, and promoting our projects in the social media. This will be for sure an opportunity to develop your skills through post-processing and video editing..."
+            more=" coders throughout the world. It can be a key driver of content distribution. Our strategy is to create a community of people interested in technology. So this team will be responsible for creating and publishing original content, sharing memories of the club, and promoting our projects in the social media. This will be for sure an opportunity to develop your skills through post-processing and video editing..."
             />
              <SelectOption
                     title="Design  team"
@@ -81,8 +81,8 @@ export const FormStep4 = () => {
                 />
 
             <div className='navigation'>
-                <Link to='/step3'>Revenir</Link>
-                <button  onClick={handleNextStep} className="cssbuttons-io-button"> suivante
+                <Link to='/step3'>Back</Link>
+                <button  onClick={handleNextStep} className="cssbuttons-io-button"> Next
                   <div className="icon">
                   <ButtonIcon/>
                   </div>
