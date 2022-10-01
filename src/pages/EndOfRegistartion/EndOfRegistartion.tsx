@@ -53,7 +53,7 @@ function EndOfRegistartion() {
         <path id="Vector_31" d="M548.371 738.518H547.721C544.661 738.518 541.725 737.303 539.561 735.138C537.397 732.974 536.181 730.039 536.181 726.978V674.118H559.911V726.978C559.911 730.039 558.695 732.974 556.531 735.138C554.367 737.303 551.432 738.518 548.371 738.518Z" fill="url(#paint1_linear)"/>
         <path id="Vector_32" d="M597.371 738.518H596.721C593.661 738.518 590.725 737.303 588.561 735.138C586.397 732.974 585.181 730.039 585.181 726.978V674.118H608.911V726.978C608.911 730.039 607.695 732.974 605.531 735.138C603.367 737.303 600.432 738.518 597.371 738.518Z" fill="url(#paint2_linear)"/>
         <path id="Vector_33" d="M674.371 738.518H673.721C670.661 738.518 667.725 737.303 665.561 735.138C663.397 732.974 662.181 730.039 662.181 726.978V674.118H685.911V726.978C685.911 730.039 684.695 732.974 682.531 735.138C680.367 737.303 677.432 738.518 674.371 738.518Z" fill="url(#paint3_linear)"/>
-        <path id="Vector_34" d="M578.51 96.4834L578.52 96.4957L578.531 96.5076C583.685 102.221 590.434 111.588 597.797 126.726L597.798 126.73C613.465 158.638 621.544 194.732 621.655 231.32L622.93 650.608L517.93 650.927L516.661 233.319C516.547 195.664 524.762 158.515 541.048 125.774C546.594 114.716 552.917 104.371 559.813 96.561L559.822 96.5507L559.831 96.5402C560.972 95.1742 562.398 94.0744 564.009 93.3179C565.62 92.5615 567.377 92.1667 569.157 92.1613C570.937 92.1559 572.697 92.54 574.312 93.2866C575.928 94.0333 577.361 95.1244 578.51 96.4834Z" fill="#EEEEEE" stroke="black" stroke-width="2"/>
+        <path id="Vector_34" d="M578.51 96.4834L578.52 96.4957L578.531 96.5076C583.685 102.221 590.434 111.588 597.797 126.726L597.798 126.73C613.465 158.638 621.544 194.732 621.655 231.32L622.93 650.608L517.93 650.927L516.661 233.319C516.547 195.664 524.762 158.515 541.048 125.774C546.594 114.716 552.917 104.371 559.813 96.561L559.822 96.5507L559.831 96.5402C560.972 95.1742 562.398 94.0744 564.009 93.3179C565.62 92.5615 567.377 92.1667 569.157 92.1613C570.937 92.1559 572.697 92.54 574.312 93.2866C575.928 94.0333 577.361 95.1244 578.51 96.4834Z" fill="#EEEEEE" stroke="black" strokeWidth="2"/>
         <path id="Vector_35" d="M585.811 142.368H551.971C545.896 142.368 540.971 147.293 540.971 153.368V156.958C540.971 163.034 545.896 167.958 551.971 167.958H585.811C591.886 167.958 596.811 163.034 596.811 156.958V153.368C596.811 147.293 591.886 142.368 585.811 142.368Z" fill="#535461"/>
         <path id="Vector_36" d="M433.431 396.448L451.231 396.538V418.478H433.431V396.448Z" fill="#535461"/>
         <path id="Vector_37" d="M690.171 396.448L707.961 396.538V418.478H690.171V396.448Z" fill="#535461"/>
@@ -61,8 +61,8 @@ function EndOfRegistartion() {
         </g>
         </g>
         <defs>
-        <filter id="filter0_d" x="0" y="0" width="1123" height="837" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <filter id="filter0_d" x="0" y="0" width="1123" height="837" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+        <feFlood floodOpacity="0" result="BackgroundImageFix"/>
         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
         <feOffset dy="4"/>
         <feGaussianBlur stdDeviation="15"/>
@@ -71,24 +71,24 @@ function EndOfRegistartion() {
         <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
         </filter>
         <linearGradient id="paint0_linear" x1="470.721" y1="674.368" x2="470.721" y2="738.768" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#E0E0E0"/>
-        <stop offset="0.31" stop-color="#FCCC63"/>
-        <stop offset="0.77" stop-color="#F55F44"/>
+        <stop stopColor="#E0E0E0"/>
+        <stop offset="0.31" stopColor="#FCCC63"/>
+        <stop offset="0.77" stopColor="#F55F44"/>
         </linearGradient>
         <linearGradient id="paint1_linear" x1="548.051" y1="674.118" x2="548.051" y2="738.518" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#E0E0E0"/>
-        <stop offset="0.31" stop-color="#FCCC63"/>
-        <stop offset="0.77" stop-color="#F55F44"/>
+        <stop stopColor="#E0E0E0"/>
+        <stop offset="0.31" stopColor="#FCCC63"/>
+        <stop offset="0.77" stopColor="#F55F44"/>
         </linearGradient>
         <linearGradient id="paint2_linear" x1="597.051" y1="674.118" x2="597.051" y2="738.518" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#E0E0E0"/>
-        <stop offset="0.31" stop-color="#FCCC63"/>
-        <stop offset="0.77" stop-color="#F55F44"/>
+        <stop stopColor="#E0E0E0"/>
+        <stop offset="0.31" stopColor="#FCCC63"/>
+        <stop offset="0.77" stopColor="#F55F44"/>
         </linearGradient>
         <linearGradient id="paint3_linear" x1="674.051" y1="674.118" x2="674.051" y2="738.518" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#E0E0E0"/>
-        <stop offset="0.31" stop-color="#FCCC63"/>
-        <stop offset="0.77" stop-color="#F55F44"/>
+        <stop stopColor="#E0E0E0"/>
+        <stop offset="0.31" stopColor="#FCCC63"/>
+        <stop offset="0.77" stopColor="#F55F44"/>
         </linearGradient>
         </defs>
         </svg>
