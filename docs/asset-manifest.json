@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.98bf7320.css",
-    "main.js": "/static/js/main.561e737e.js",
+    "main.css": "/static/css/main.453521e7.css",
+    "main.js": "/static/js/main.c544c850.js",
+    "static/media/itGeekslogo.png": "/static/media/itGeekslogo.86cebb265c95ff6af722.png",
     "static/media/waiting.svg": "/static/media/waiting.0aab492d32e5d9834d8d267f05c79677.svg",
     "static/media/team.svg": "/static/media/team.c85218c44dfd1e571c4f8bf559168231.svg",
     "static/media/book.svg": "/static/media/book.ffbf4cea3ad39fa68f5fd7e5755a4edb.svg",
@@ -11,11 +12,11 @@
     "static/media/check.svg": "/static/media/check.f16c3ae53cd894a1e5a197ecfd7d9785.svg",
     "static/media/button.svg": "/static/media/button.09d8f5e19a70cbd4be3890e06ac0622b.svg",
     "static/media/failed.svg": "/static/media/failed.cb0e6900837bee9f2c47cc16fe62ca18.svg",
-    "main.98bf7320.css.map": "/static/css/main.98bf7320.css.map",
-    "main.561e737e.js.map": "/static/js/main.561e737e.js.map"
+    "main.453521e7.css.map": "/static/css/main.453521e7.css.map",
+    "main.c544c850.js.map": "/static/js/main.c544c850.js.map"
   },
   "entrypoints": [
-    "static/css/main.98bf7320.css",
-    "static/js/main.561e737e.js"
+    "static/css/main.453521e7.css",
+    "static/js/main.c544c850.js"
   ]
 }

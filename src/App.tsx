@@ -1,14 +1,15 @@
-import {Router} from './routes/router'
-import {FormProvider} from './context/FormContext'
+import { Router } from "./routes/router";
+import { FormProvider } from "./context/FormContext";
+import React from "react";
 
-import GlobalStyled from './components/styles/GlobalStyledComponents/GlobalStyled';
+import GlobalStyled from "./components/styles/GlobalStyledComponents/GlobalStyled";
 
 function App() {
   return (
     <div>
       <FormProvider>
-          <Router />
-          <GlobalStyled />
+        <Router />
+        <GlobalStyled />
       </FormProvider>
     </div>
   );

@@ -1,108 +1,94 @@
-import { createContext, ReactNode, useContext, useReducer } from 'react'
-
+import { createContext, ReactNode, useContext, useReducer } from "react";
+import React from "react";
 
 type State = {
-    currentStep: number
-    name: string
-    level: undefined | 1 | 2 
-    team: undefined | 1 | 2 | 3 | 4
-    email: string
-    github: string
-    number:number
-
-}
+  currentStep: number;
+  name: string;
+  level: undefined | 1 | 2;
+  team: undefined | 1 | 2 | 3 | 4;
+  email: string;
+  github: string;
+  number: number;
+};
 
 type Action = {
-    type: FormActions
-    payload: any
-}
+  type: FormActions;
+  payload: any;
+};
 
 type ContextType = {
-    state: State 
-    dispatch: (action: Action) => void
-
-}
+  state: State;
+  dispatch: (action: Action) => void;
+};
 
 type FormProviderProps = {
-     children: ReactNode
-}
+  children: ReactNode;
+};
 
 const initialData: State = {
-    currentStep: 0,
-    name: '',
-    level: undefined,
-    team:undefined,
-    email: '',
-    github: '',
-    number:0,
-}
-
+  currentStep: 0,
+  name: "",
+  level: undefined,
+  team: undefined,
+  email: "",
+  github: "",
+  number: 0,
+};
 
 // Context API
-const FormContext = createContext<ContextType | undefined>(undefined)
-// fetch user api 
+const FormContext = createContext<ContextType | undefined>(undefined);
+// fetch user api
 
 // Reducer
 export enum FormActions {
-    setCurrentStep,
-    setName,
-    setLevel,
-    setEmail,
-    setGithub,
-    setNumber,
-    reset,
-    setTeam
+  setCurrentStep,
+  setName,
+  setLevel,
+  setEmail,
+  setGithub,
+  setNumber,
+  reset,
+  setTeam,
 }
-
 
 const formReducer = (state: State, action: Action) => {
-   
-
-
-
-    switch(action.type) {
-        case FormActions.setCurrentStep: 
-            return {...state, currentStep: action.payload}
-        case FormActions.setName: 
-            return {...state, name: action.payload}
-        case FormActions.setLevel: 
-            return {...state, level: action.payload}
-        case FormActions.setTeam: 
-            return {...state, team: action.payload}
-        case FormActions.setEmail: 
-            return {...state, email: action.payload}
-        case FormActions.setGithub: 
-            return {...state, github: action.payload}
-        case  FormActions.setNumber: 
-        return {...state, number: action.payload}
-        case  FormActions.reset: 
-        return initialData;
-        default:
-            return state
-        
-    }
-   
-}
+  switch (action.type) {
+    case FormActions.setCurrentStep:
+      return { ...state, currentStep: action.payload };
+    case FormActions.setName:
+      return { ...state, name: action.payload };
+    case FormActions.setLevel:
+      return { ...state, level: action.payload };
+    case FormActions.setTeam:
+      return { ...state, team: action.payload };
+    case FormActions.setEmail:
+      return { ...state, email: action.payload };
+    case FormActions.setGithub:
+      return { ...state, github: action.payload };
+    case FormActions.setNumber:
+      return { ...state, number: action.payload };
+    case FormActions.reset:
+      return initialData;
+    default:
+      return state;
+  }
+};
 
 // Provider
-export const FormProvider = ({children}: FormProviderProps) => {
-    const [state, dispatch] = useReducer(formReducer, initialData)
-    const value = {state, dispatch}
+export const FormProvider = ({ children }: FormProviderProps) => {
+  const [state, dispatch] = useReducer(formReducer, initialData);
+  const value = { state, dispatch };
 
-    return(
-        <FormContext.Provider value={value}>
-            {children}
-        </FormContext.Provider>
-    )
-}
+  return <FormContext.Provider value={value}>{children}</FormContext.Provider>;
+};
 
 // Hooks Context
 export const useForm = () => {
-    const context = useContext(FormContext)
-    if(context === undefined) {
-        throw new Error('useForm needs to be used inside the FormProvider')
-    }
-    return context
-}
+  const context = useContext(FormContext);
+  if (context === undefined) {
+    throw new Error("useForm needs to be used inside the FormProvider");
+  }
+  return context;
+};
 
 // import our data
