@@ -2,8 +2,7 @@ import * as C from "./styles";
 import { ReactNode } from "react";
 import { Header } from "../Header";
 import { SidebarItem } from "../SidebarItem";
-import { useForm } from "../../context/FormContext";
-import React from "react";
+import {useForm} from "../../context/hooks/UseForm.tsx";
 
 type Props = {
   children: ReactNode;

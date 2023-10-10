@@ -1,6 +1,5 @@
-import React from 'react'
 import './EndOfRegistration.css'
-function EndOfRegistartion() {
+function EndOfRegistration() {
   return (
     <>
     <div>
@@ -104,4 +103,4 @@ function EndOfRegistartion() {
   )
 }
 
-export default EndOfRegistartion
+export default EndOfRegistration

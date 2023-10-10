@@ -1,11 +1,12 @@
-import { createContext, ReactNode, useContext, useReducer } from "react";
-import React from "react";
+import {createContext, ReactNode, useReducer} from "react";
+import {FormActions} from "./types/types.ts";
+
 
 type State = {
   currentStep: number;
   name: string;
   level: undefined | 1 | 2;
-  team: undefined | 1 | 2 | 3 | 4;
+  team: undefined | 1 | 2 ;
   email: string;
   github: string;
   number: number;
@@ -36,20 +37,8 @@ const initialData: State = {
 };
 
 // Context API
-const FormContext = createContext<ContextType | undefined>(undefined);
+export const FormContext = createContext<ContextType | undefined>(undefined);
 // fetch user api
-
-// Reducer
-export enum FormActions {
-  setCurrentStep,
-  setName,
-  setLevel,
-  setEmail,
-  setGithub,
-  setNumber,
-  reset,
-  setTeam,
-}
 
 const formReducer = (state: State, action: Action) => {
   switch (action.type) {
@@ -80,15 +69,6 @@ export const FormProvider = ({ children }: FormProviderProps) => {
   const value = { state, dispatch };
 
   return <FormContext.Provider value={value}>{children}</FormContext.Provider>;
-};
-
-// Hooks Context
-export const useForm = () => {
-  const context = useContext(FormContext);
-  if (context === undefined) {
-    throw new Error("useForm needs to be used inside the FormProvider");
-  }
-  return context;
 };
 
 // import our data

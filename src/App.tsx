@@ -1,18 +1,20 @@
-import { Router } from "./routes/router";
-import { FormProvider } from "./context/FormContext";
-import React from "react";
+import {Router} from "./routes/router";
+import {FormProvider} from "./context/FormContext";
+
 
 import GlobalStyled from "./components/styles/GlobalStyledComponents/GlobalStyled";
+import {Toaster} from "react-hot-toast";
 
 function App() {
-  return (
-    <div>
-      <FormProvider>
-        <Router />
-        <GlobalStyled />
-      </FormProvider>
-    </div>
-  );
+    return (
+        <div>
+            <FormProvider>
+                <Toaster/>
+                <Router/>
+                <GlobalStyled/>
+            </FormProvider>
+        </div>
+    );
 }
 
 export default App;

@@ -1,6 +1,6 @@
 import * as C from "./styles";
 import Imgsrc from "../../img/itGeekslogo.png";
-import React from "react";
+
 
 export const Header = () => {
   return (
