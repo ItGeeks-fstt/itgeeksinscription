@@ -7,94 +7,95 @@ import {FormActions} from "../../context/types/types.ts";
 import toast from "react-hot-toast";
 
 export const FormStep3 = () => {
-    const {state, dispatch} = useForm();
-    const navigate = useNavigate();
+        const {state, dispatch} = useForm();
+        const navigate = useNavigate();
 
-    const handleNextStep = (e: FormEvent<EventTarget>) => {
-        if (state.email.includes("@") && state.github !== "" && state.number) {
-            navigate("/step4");
-        } else {
-            toast.error(`   correctly fill in the data
-        
-        ${state.email.includes("@") ? "" : "email must be valid (have @)"}
-        ${state.github !== "" ? "" : "github otherwise type null"}
-        ${state.number ? "" : "Number"}
-        `);
+        const handleNextStep = (e: FormEvent<EventTarget>) => {
             e.preventDefault();
-        }
-    };
+            if (state.email.includes("@") && state.number) {
+                navigate("/step4");
+            } else {
+                if (!state.email.includes("@")) {
+                    toast("invalid email")
+                }
+                if (!state.number) {
+                    toast("you must enter your name");
+                }
+            }
+        };
 
-    const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
-        dispatch({
-            type: FormActions.setEmail,
-            payload: e.target.value,
-        });
-    };
-
-    const handleUrlChange = (e: ChangeEvent<HTMLInputElement>) => {
-        dispatch({
-            type: FormActions.setGithub,
-            payload: e.target.value,
-        });
-    };
-
-    const handleNumberChange = (e: ChangeEvent<HTMLInputElement>) => {
-        dispatch({
-            type: FormActions.setNumber,
-            payload: e.target.value,
-        });
-    };
-
-    useEffect(() => {
-        if (state.name === "") {
-            navigate("/");
-        } else {
+        const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
             dispatch({
-                type: FormActions.setCurrentStep,
-                payload: 3,
+                type: FormActions.setEmail,
+                payload: e.target.value,
             });
-        }
-    }, [dispatch, navigate, state.name]);
+        };
 
-    return (
-        <Theme>
-            <C.Container>
-                <p className="passo"> Step 3/5</p>
-                <h2>Cool {state.name}, where do we find you ?</h2>
-                <p>Fill in your details so that we can contact you.</p>
+        const handleUrlChange = (e: ChangeEvent<HTMLInputElement>) => {
+            dispatch({
+                type: FormActions.setGithub,
+                payload: e.target.value,
+            });
+        };
 
-                <label>What is your email ?</label>
-                <input type="email" onChange={handleEmailChange} value={state.email}/>
+        const handleNumberChange = (e: ChangeEvent<HTMLInputElement>) => {
+            dispatch({
+                type: FormActions.setNumber,
+                payload: e.target.value,
+            });
+        };
 
-                <label>What is your whatsapp number?</label>
-                <input
-                    type="number"
-                    onChange={handleNumberChange}
-                    value={state.number}
-                />
-                <label>What is your GitHub ?</label>
-                <input type="text" onChange={handleUrlChange} value={state.github}/>
+        useEffect(() => {
+            if (state.name === "") {
+                navigate("/");
+            } else {
+                dispatch({
+                    type: FormActions.setCurrentStep,
+                    payload: 3,
+                });
+            }
+        }, [dispatch, navigate, state.name]);
 
-                <div className="navigation">
-                    <Link to="/step2">Back</Link>
-                    <button
-                        onClick={handleNextStep}
-                        type="submit"
-                        className="cssbuttons-io-button"
-                    >
-                        {" "}
-                        Next
-                        <div className="icon">
-                            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0h24v24H0z" fill="none"></path>
-                                <path
-                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                                    fill="currentColor"></path>
-                            </svg>
-                        </div>
-                    </button>
-                </div>
-            </C.Container>
-        </Theme>
-    );
-};
+        return (
+            <Theme>
+                <C.Container>
+                    <p className="passo"> Step 3/5</p>
+                    <h2>Cool {state.name}, where do we find you ?</h2>
+                    <p>Fill in your details so that we can contact you.</p>
+
+                    <label>What is your email ?</label>
+                    <input type="email" onChange={handleEmailChange} value={state.email}/>
+
+                    <label>What is your whatsapp number?</label>
+                    <input
+                        type="number"
+                        onChange={handleNumberChange}
+                        value={state.number}
+                    />
+                    <label>What is your GitHub (optional) ?</label>
+                    <input type="text" onChange={handleUrlChange} value={state.github}/>
+
+                    <div className="navigation">
+                        <Link to="/step2">Back</Link>
+                        <button
+                            onClick={handleNextStep}
+                            type="submit"
+                            className="cssbuttons-io-button"
+                        >
+                            {" "}
+                            Next
+                            <div className="icon">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                </C.Container>
+            </Theme>
+        );
+    }
+;

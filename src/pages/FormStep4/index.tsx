@@ -36,20 +36,24 @@ export const FormStep4 = () => {
                 <p>You can read the description to get more info</p>
 
                 <SelectOption
-                    title="Formation  team"
-                    description="Coding is what we do and love. And we want for all students who are interested in computer science to "
-                    icon="🏫"
+                    title="Media & Design Team"
+                    description="This team is responsible for all aspects of design and media promotion for your club."
+                    icon="🎨"
                     selected={state.team === 1}
-                    onClick={() => setLevel(1)}
-                    more=" understand the concepts and write better code by learning and teaching each other. By choosing this team, you will be helping other students in developing applications, learning programming languages and solving problems… You should know the basic coding languages such as C++ and JavaScript. More over you should know how to write and debug code, as well as having an experience in front-end or back-end software development."
+                    onClick={() => setLevel(5)}
+                    more="Key Responsibilities:  Graphic Design: They create visuals, posters, flyers, and any graphic materials needed for club events and promotions.
+Social Media Management: This team manages the club's social media accounts, including Instagram, and posts content regularly to keep members and the public informed.
+Content Creation: They develop and curate content for various platforms, ensuring that the club's message is effectively communicated."
                 />
                 <SelectOption
-                    title="Organization team "
-                    description="This team should organize all the events hosted by the club in the most efficient way possible."
-                    icon="⌚"
-                    selected={state.team === 2}
-                    onClick={() => setLevel(2)}
-                    more=" It should manage the event planning process, manage the budget parameters and develop networks with other event organizers so we can collaborate on other events. As a requirement, you should have the ability to work on a team, flexibility, motivation and the sense of responsibility."
+                    title="Project Organisation Team"
+                    description="This team focuses on planning and executing various events that are relevant to the club's mission and interests."
+                    icon="🏫"
+                    selected={state.team === 1}
+                    onClick={() => setLevel(5)}
+                    more="Key Responsibilities:
+Event Planning: They plan and coordinate events such as Informatique bdarija, Hackathons, and ice breakers, ensuring that they align with the club's objectives.
+Sponsorship: Identifying and securing sponsorships for club events, which includes creating sponsorship proposals, negotiating agreements, and managing sponsor relationships."
                 />
 
                 <div className="navigation">
@@ -58,22 +62,12 @@ export const FormStep4 = () => {
                         {" "}
                         Next
                         <div className="icon">
-                            <SelectOption
-                                title="Formation  team"
-                                description="Coding is what we do and love. And we want for all students who are interested in computer science to "
-                                icon="🏫"
-                                selected={state.team === 1}
-                                onClick={() => setLevel(1)}
-                                more=" understand the concepts and write better code by learning and teaching each other. By choosing this team, you will be helping other students in developing applications, learning programming languages and solving problems… You should know the basic coding languages such as C++ and JavaScript. More over you should know how to write and debug code, as well as having an experience in front-end or back-end software development."
-                            />
-                            <SelectOption
-                                title="Organization team "
-                                description="This team should organize all the events hosted by the club in the most efficient way possible."
-                                icon="⌚"
-                                selected={state.team === 2}
-                                onClick={() => setLevel(2)}
-                                more=" It should manage the event planning process, manage the budget parameters and develop networks with other event organizers so we can collaborate on other events. As a requirement, you should have the ability to work on a team, flexibility, motivation and the sense of responsibility."
-                            />
+                            <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                    fill="currentColor"></path>
+                            </svg>
                         </div>
                     </button>
                 </div>

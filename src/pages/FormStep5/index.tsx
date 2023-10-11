@@ -6,6 +6,7 @@ import {API_URL} from "../../config.ts";
 import {useForm} from "../../context/hooks/UseForm.tsx";
 import {FormActions} from "../../context/types/types.ts";
 
+
 type user = {
     name: string;
     email: string;
@@ -39,22 +40,23 @@ export const FormStep5 = () => {
             });
             setIsWaiting(false);
             setHasError(false);
+            setTimeout(() => {
+                window.location.href = 'https://itgeeks.social'
+            }, 1000)
+
         } catch (e) {
             setHasError(true);
             setIsWaiting(false);
-            throw new Error();
         }
     }
 
     useEffect(() => {
-        if (state.email === "" || state.github === "" || !state.number) {
-            navigate("/step3");
-        } else {
-            dispatch({
-                type: FormActions.setCurrentStep,
-                payload: 5,
-            });
 
+        dispatch({
+            type: FormActions.setCurrentStep,
+            payload: 5,
+        });
+        if (state.name || state.email || state.level || state.github || state.number || state.team) {
             SubmitForm({
                 name: state.name,
                 email: state.email,
@@ -62,9 +64,11 @@ export const FormStep5 = () => {
                 github: state.github,
                 number: `0+${state.number}`,
                 team: teams[state.team || 1],
-            });
-            //use an api to send the infos
+            })
+        } else {
+            navigate("/");
         }
+        //use an api to send the infos
     }, [dispatch, navigate, state.email, state.github, state.level, state.name, state.number, state.team]);
 
     return (

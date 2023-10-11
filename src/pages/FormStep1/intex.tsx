@@ -19,9 +19,8 @@ export const FormStep1 = () => {
     };
 
     const handleNextStep = () => {
-        if (state.name !== "") {
+        if (state.name) {
             navigate("/step2");
-
         } else {
             toast.error("Enter your name");
         }
@@ -49,8 +48,7 @@ export const FormStep1 = () => {
                     value={state.name}
                 />
 
-                <button onClick={handleNextStep} className="cssbuttons-io-button">
-                    {" "}
+                <button disabled={!state.name} onClick={handleNextStep} className="cssbuttons-io-button">
                     Next
                     <div className="icon">
                         <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

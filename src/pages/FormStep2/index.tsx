@@ -19,7 +19,7 @@ export const FormStep2 = () => {
             type: FormActions.setCurrentStep,
             payload: 2,
         });
-    }, []);
+    }, [dispatch]);
 
     const setLevel = (level: number) => {
         dispatch({
