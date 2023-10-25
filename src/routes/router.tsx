@@ -10,7 +10,8 @@ import EndOfRegistration from "../pages/EndOfRegistration/EndOfRegistration";
 export const Router = () => {
     return (
         <BrowserRouter>
-            <Routes>
+            <Routes>sh
+                s
                 {/* comment this route to disable the end of registration*/}
                 <Route path="/" element={<EndOfRegistration/>} />
                 {/*<Route path="/" element={<FormStep1/>}/>*/}
